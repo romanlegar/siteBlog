@@ -1,0 +1,16 @@
+.headline{
+  text-align: center;
+  font-size: 64px;
+}
+.nav{
+  text-transform: capitalize;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.nav-item{
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px
+}

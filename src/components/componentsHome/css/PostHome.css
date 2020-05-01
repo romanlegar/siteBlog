@@ -1,0 +1,21 @@
+.postConteiner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+  .post{
+     text-decoration: none;
+  }
+    .post .postImg{
+      width: 200px;
+      height: 200px;
+    }
+    .post .postText{
+      position: relative;
+      margin-top: -31px;
+      background: rgba(220, 20, 60, 0.4);
+      color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5)
+    }

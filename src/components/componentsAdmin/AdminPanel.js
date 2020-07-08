@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FormRegistration from './FormRegistration';
 import Actions from '../../actions/demoActionCreator';
+import AdminMenu from './AdminMenu';
 import { connect } from 'react-redux';
 import './adminpanel.css';
 
@@ -15,7 +16,9 @@ class AdminPanel extends Component {
       <div>
         {
           data === true ?
-              <div>admin</div>
+              <div>
+                <AdminMenu/>
+              </div>
           :
               <div>
                 <FormRegistration onSubmit={activeAdminPanel}/>

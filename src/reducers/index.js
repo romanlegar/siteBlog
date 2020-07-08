@@ -2,8 +2,9 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 const AdminPanelState = {
-  admin: false,
-  adminData: {login: 'Jake', password: '1111'}
+  admin: true,
+  adminData: {login: 'Jake', password: '1111'},
+  activeFilter: 1
 };
 
 function adminPanelData( state = AdminPanelState, action){
@@ -12,6 +13,11 @@ function adminPanelData( state = AdminPanelState, action){
     return {
       ...state,
       admin: true
+    }
+    case 'ACTION_FILTER':
+    return {
+      ...state,
+      activeFilter: action.data
     }
     default:
       return state;

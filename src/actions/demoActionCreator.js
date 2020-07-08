@@ -28,6 +28,16 @@ const demoActionCreator = {
           null;
         }
     };
+  },
+  activeAdminFilter: (element) => {
+    const value = element.target.dataset.id;
+    console.log(value);
+    return function (dispatch, getState) {
+      dispatch({
+          type: 'ACTION_FILTER',
+          data: value
+        });
+    };
   }
 };
 

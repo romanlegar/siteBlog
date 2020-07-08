@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
+import FormRegistration from './FormRegistration';
+import Actions from '../../actions/demoActionCreator';
 import { connect } from 'react-redux';
+import './adminpanel.css';
 
 class AdminPanel extends Component {
   render() {
-    let {data} = this.props;
-    console.log(data);
+    let {data, activeAdminPanel} = this.props;
+
+    const onSubmit = (formData) => {
+      console.log(formData);
+    }
     return (
       <div>
         {
           data === true ?
               <div>admin</div>
           :
-              <div>noadmin</div>
+              <div>
+                <FormRegistration onSubmit={activeAdminPanel}/>
+              </div>
         }
       </div>
     )
@@ -23,8 +31,17 @@ const MapStateToProps = (state, ownProps) => {
 
   }
 }
+const MapDispatchToProps = ( dispatch ) => {
+  return {
+    dispatch,
+    activeAdminPanel: (dataUser) => {
+      dispatch( Actions.activeAdminPanel(dataUser) );
+    }
+  }
+}
 const ConnectedAdminPanel = connect(
-  MapStateToProps
+  MapStateToProps,
+  MapDispatchToProps
 )(AdminPanel)
 
 export default ConnectedAdminPanel;

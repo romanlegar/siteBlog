@@ -1,0 +1,28 @@
+
+.headlineForm {
+  color: white;
+  font-weight: 900;
+}
+.formAdmin {
+  width: 320px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30%;
+  margin-top: 12%;
+}
+input {
+
+}
+.submit {
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid #3b3535;
+  color: #3b3535;
+  height: 26px;
+  left: 84px;
+  top: -34px;
+  position: relative;
+}

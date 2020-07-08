@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Actions from '../../actions/demoActionCreator';
 import './css/HeaderHome.css';
-   
+
 class HeaderHome extends Component {
   render() {
-    let { nameSite, filters, activeFilter } = this.props;
+    const { nameSite, filters, activeFilter } = this.props;
     return (
       <div>
         <h1 className='headline'>{nameSite}</h1>

@@ -15,6 +15,19 @@ const demoActionCreator = {
           data: value
         });
     };
+  },
+  activeAdminPanel: (dataUser) => {
+    return function (dispatch, getState) {
+      let states = getState();
+      let dataAdmin = states.adminPanelData.adminData;
+      if(dataAdmin.login == dataUser.login && dataAdmin.password == dataUser.password){
+        dispatch({
+            type: 'ACTION_ADMINPANEL'
+          });
+        }else {
+          null;
+        }
+    };
   }
 };
 

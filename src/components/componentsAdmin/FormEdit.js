@@ -3,21 +3,21 @@ import { connect } from 'react-redux';
 import Actions from '../../actions/demoActionCreator';
 import { Field, reduxForm } from 'redux-form';
 
-const ContactForm = (props) => {
+const FormEdit = (props) => {
         return (
-          <form className="formAdmin" onSubmit={props.handleSubmit}>
+          <form className="formEdit" onSubmit={props.handleSubmit}>
             <p className="headlineForm">Sing In</p>
+            <label htmlFor="siteName">siteName</label>
+            <Field component={"name"} name={"name"}/>
             <Field component={"input"} name={"login"}/>
             <Field component={"input"} name={"password"}/>
             <button>Submit</button>
           </form>
         )
-
 };
 
-const ContactReduxForm = reduxForm({
+const ContactFormEdit = reduxForm({
+  form: 'edit'
+})(FormEdit)
 
-  form: 'contact'
-})(ContactForm)
-
-export default ContactReduxForm;
+export default ContactFormEdit;

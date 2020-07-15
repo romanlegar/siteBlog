@@ -4,7 +4,7 @@ import { reducer as formReducer } from 'redux-form';
 const AdminPanelState = {
   admin: true,
   adminData: {login: 'Jake', password: '1111'},
-  activeFilter: 1
+  activeFilter: 0
 };
 
 function adminPanelData( state = AdminPanelState, action){

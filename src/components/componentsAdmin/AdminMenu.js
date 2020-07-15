@@ -2,19 +2,28 @@ import React, { Component } from 'react';
 import Actions from '../../actions/demoActionCreator';
 import { connect } from 'react-redux';
 import './adminpanel.css';
+import FormEdit from './FormEdit';
+import PostEdit from './PostEdit';
+import ActivFormMenu from './ActivFormMenu';
+
 
 class AdminMenu extends Component {
+
   render() {
     let {activeAdminFilter, filters} = this.props;
     return (
       <div>
         <ul>
-          <li onClick={activeAdminFilter} data-id="1">Setting</li>
-          <li onClick={activeAdminFilter} data-id="2">NewPost</li>
+          <li onClick={activeAdminFilter} data-id="0">Setting</li>
+          <li onClick={activeAdminFilter} data-id="1">NewPost</li>
           <li onClick={activeAdminFilter} data-id="3">Excit</li>
         </ul>
         <div>
-          {filters}
+          <ActivFormMenu counter = {filters}>
+            <FormEdit/>
+            <PostEdit/>
+          </ActivFormMenu>
+
         </div>
       </div>
     )

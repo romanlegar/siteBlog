@@ -1,0 +1,17 @@
+.header {
+  height: 100px;
+  background-size: cover;
+  text-align: center;
+  padding-top: 60px;
+  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-size: 28px;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('https://cs6.pikabu.ru/images/big_size_comm/2015-08_1/1438471667144592005.jpg');
+}
+.pageContent {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+  text-align: left;
+  font-size: 10px;
+}

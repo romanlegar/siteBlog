@@ -7,6 +7,9 @@
 }
   .post{
      text-decoration: none;
+     width: 200px;
+     height: 200px;
+     margin-bottom: 10px;
   }
     .post .postImg{
       width: 200px;
@@ -14,8 +17,13 @@
     }
     .post .postText{
       position: relative;
-      margin-top: -31px;
       background: rgba(220, 20, 60, 0.4);
       color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5)
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      top: -204px;
+      height: 200px;
+      opacity: 0;
+    }
+    .post .postText:hover{
+      opacity: 1;
     }

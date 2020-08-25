@@ -38,6 +38,19 @@ const demoActionCreator = {
           data: value
         });
     };
+  },
+  createNewPost: (value) => {
+    console.log(value);
+    return function (dispatch, getState) {
+      let states = getState();
+      let dataAdmin = states.PostData.arrPost;
+      console.log(dataAdmin);
+      dispatch({
+          type: 'CREATE',
+          data: value
+        });
+    };
+
   }
 };
 

@@ -42,10 +42,16 @@ function headerData( state = headerState, action){
   }
 };
 const postState = {
-  arrPost: [{headline: 'Test', postLink:'postLink1', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink2', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink3', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink4', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink5', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink6', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink1', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}]
+  arrPost: [{headline: 'Test', postLink:'postLink1', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink2', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink3', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink4', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}, {headline: 'Test', postLink:'postLink5', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}},
+  {headline: 'Test', postLink:'postLink6', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}]
 };
 function PostData( state = postState, action ){
   switch( action.type ){
+    case 'CREATE':
+      return  {
+        ... state,
+        arrPost: [...state.arrPost, {headline: 'Test22', postLink:'postLink1', category: 'news', postImg: 'https://i.pinimg.com/originals/ed/1f/ca/ed1fca6facf4a6a15b65f06e41ecc373.jpg', content:{headline:'Tema', text:'text'}}]
+      }
     default:
       return state;
   }

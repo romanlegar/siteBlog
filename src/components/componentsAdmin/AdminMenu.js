@@ -5,23 +5,26 @@ import './adminpanel.css';
 import FormEdit from './FormEdit';
 import PostEdit from './PostEdit';
 import ActivFormMenu from './ActivFormMenu';
-
+import { Link } from 'react-router-dom';
 
 class AdminMenu extends Component {
 
   render() {
-    let {activeAdminFilter, filters} = this.props;
+    let {activeAdminFilter, filters, createNewPost} = this.props;
+
     return (
       <div>
         <ul>
           <li onClick={activeAdminFilter} data-id="0">Setting</li>
           <li onClick={activeAdminFilter} data-id="1">NewPost</li>
-          <li onClick={activeAdminFilter} data-id="3">Excit</li>
+          <a className="navbar-brand" href='/'>
+            Exit
+          </a>
         </ul>
         <div>
           <ActivFormMenu counter = {filters}>
             <FormEdit/>
-            <PostEdit/>
+            <PostEdit onSubmit={createNewPost}/>
           </ActivFormMenu>
 
         </div>
@@ -40,7 +43,11 @@ const MapDispatchToProps = ( dispatch ) => {
     dispatch,
     activeAdminFilter: (element) => {
       dispatch( Actions.activeAdminFilter(element) );
+    },
+    createNewPost: (value) => {
+      dispatch( Actions.createNewPost(value) );
     }
+
   }
 }
 const ConnecteAdminMenu = connect(

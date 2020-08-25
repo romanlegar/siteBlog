@@ -1,0 +1,8 @@
+.PostEdit {
+  display: flex;
+  flex-direction: column;
+}
+.PostEdit .PostEditInput {
+
+  margin-bottom: 10px;
+}

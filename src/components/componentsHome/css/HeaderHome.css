@@ -1,6 +1,7 @@
 .headline{
   text-align: center;
   font-size: 64px;
+  padding: 40px;
 }
 .nav{
   text-transform: capitalize;
@@ -12,5 +13,6 @@
 .nav-item{
   text-decoration: none;
   display: inline-block;
-  font-size: 12px
+  font-size: 12px;
+  cursor: pointer;
 }

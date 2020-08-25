@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
+import './css/Page.css';
 class Page extends Component {
   render() {
     let {match, data} = this.props;
@@ -12,8 +12,10 @@ class Page extends Component {
             if(item.postLink === match.params.name){
               return(
                 <div>
-                  <h1>{item.headline}</h1>
-                  <p>{item.content.text}</p>
+                  <header className='header'>
+                    <h1>{item.headline}</h1>
+                  </header>
+                  <p className='pageContent'>{item.content.text}</p>
                 </div>
               )
             }

@@ -12,6 +12,7 @@ class PostHome extends Component {
         <ul className='postConteiner'>
           {
             arrPost.map((item, key)=>{
+              console.log('start', item.category);
               if(activeCategory === item.category || activeCategory === 'all'){
                 return(
                   <a className='post' href= {'/post/' + item.postLink} key={key}>
